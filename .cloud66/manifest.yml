@@ -2,10 +2,10 @@ production:
   rails:
     servers:
       server:
-        unique_name: 'railsredis1'
+        unique_name: 'railspsqlredis1'
         vendor: 'digitalocean'
         region: '4'
-        size: '62'
+        size: '65'
     configuration:
       extra_packages: 
         - atop
@@ -13,11 +13,8 @@ production:
   redis:
     servers:
       server:
-        same_as: 'railsredis1'
-  mysql:
+        same_as: 'railspsqlredis1'
+  postgresql:
     servers:
       server:
-        unique_name: 'psql1'
-        vendor: 'digitalocean'
-        region: '4'
-        size: '65'
+        same_as: 'railspsqlredis1'
