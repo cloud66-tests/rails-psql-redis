@@ -1,0 +1,23 @@
+production:
+  rails:
+    servers:
+      server:
+        unique_name: 'railsredis1'
+        vendor: 'digitalocean'
+        region: '4'
+        size: '62'
+    configuration:
+      extra_packages: 
+        - atop
+        - chrony
+  redis:
+    servers:
+      server:
+        same_as: 'railsredis1'
+  mysql:
+    servers:
+      server:
+        unique_name: 'psql1'
+        vendor: 'digitalocean'
+        region: '4'
+        size: '65'
