@@ -1,20 +1,20 @@
 production:
   rails:
     servers:
-      server:
-        unique_name: 'railspsqlredis1'
-        vendor: 'digitalocean'
-        region: '4'
-        size: '65'
+      - server:
+          unique_name: 'railspsqlredis1'
+          vendor: 'digitalocean'
+          region: '4'
+          size: '65'
     configuration:
       extra_packages: 
         - atop
         - chrony
   redis:
     servers:
-      server:
-        same_as: 'railspsqlredis1'
+      - server:
+          same_as: 'railspsqlredis1'
   postgresql:
     servers:
-      server:
-        same_as: 'railspsqlredis1'
+      - server:
+          same_as: 'railspsqlredis1'
