@@ -3,9 +3,9 @@ production:
     servers:
       - server:
           unique_name: 'railspsqlredis1'
-          vendor: 'digitalocean'
-          region: '4'
-          size: '65'
+          vendor: 'aws'
+          region: 'us-east-1'
+          size: 'm3.large'
     configuration:
       extra_packages: 
         - atop
